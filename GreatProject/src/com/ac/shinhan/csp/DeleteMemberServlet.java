@@ -17,8 +17,8 @@ public class DeleteMemberServlet extends HttpServlet {
 		PersistenceManager pm = MyPersistenceManager.getManager();
 		TeamMember tm = pm.getObjectById(TeamMember.class,longKey); //키에 따른 팀 멤버중 한명을 뎃고오는 메소드가 필요하다
 		pm.deletePersistent(tm);
-		resp.setCharacterEncoding("UTF-8");
-		resp.setContentType("text/html");
+		req.setCharacterEncoding("EUC-KR");
+		resp.setContentType("text/plain;charset=utf-8");
 		
 		resp.getWriter().println("<html>");
 		resp.getWriter().println("<body>");

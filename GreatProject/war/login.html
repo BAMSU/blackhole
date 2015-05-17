@@ -1,12 +1,23 @@
+
+<!DOCTYPE html>
 <html>
+<head>
+<meta charset="EUC-KR">
+<title>로그인화면</title>
+</head>
 <body>
-Login
-<form method='post' action='/login'>
-ID: <input type='text' name='id'><br>
-Passward : <input type='password' name='password'><br>
-Remember me 30 days <input type='checkbox' name='remember'><br>
-<input type='submit' value='Log in'>
-</form>
-<a href='/signup.html'>Sign up</a>
+<table>
+	<form method="post"action="/login">
+		<tr><td>ID : </td><td><input type = "text" name = "id"></td></tr>    	
+		<tr><td>PW : </td><td><input type = "password" name = "password"></td></tr>
+		<tr>
+		<td><input type="submit" value="로그인"></td>
+		<td><input type = "checkbox" name = "days">Remember me 30 days</td>
+		</tr>
+	</form>
+	<tr>
+	<td> <a href="signup.html" target="_self"> 회원가입 </a> </td>
+	</tr>
+</table>
 </body>
 </html>

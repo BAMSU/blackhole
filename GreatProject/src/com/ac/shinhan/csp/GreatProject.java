@@ -14,6 +14,8 @@ import com.ac.shinhan.csp.TeamMember;
 public class GreatProject extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
+		req.setCharacterEncoding("EUC-KR");
+	    resp.setContentType("text/plain;charset=utf-8");
 		String name = req.getParameter("name");
 		String id = req.getParameter("id");
 		String num = req.getParameter("num");
@@ -26,11 +28,6 @@ public class GreatProject extends HttpServlet {
 		TeamMember tm = new TeamMember(name,id,num,email,kakaoid,gitid,check);
 		PersistenceManager pm = MyPersistenceManager.getManager();
 		pm.makePersistent(tm);
-		
-		
-		
-		resp.setCharacterEncoding("UTF-8");
-		resp.setContentType("text/html");
 	
 		resp.getWriter().println("<html>");
 		resp.getWriter().println("<body>");
